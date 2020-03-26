@@ -61,7 +61,6 @@ private extension MainView {
     imageView.clipsToBounds = true
     imageView.contentMode = .scaleAspectFill
     imageView.translatesAutoresizingMaskIntoConstraints = false
-    
   }
   
   func setupTableView()  {
@@ -70,7 +69,6 @@ private extension MainView {
     tableView.register(ParalaxCell.self, forCellReuseIdentifier: ParalaxCell.identifier)
     tableView.isScrollEnabled = false
     tableView.dataSource = self
-    
   }
   
   func setupContainer() {
@@ -140,4 +138,3 @@ private extension MainView {
     ])
   }
 }
-
