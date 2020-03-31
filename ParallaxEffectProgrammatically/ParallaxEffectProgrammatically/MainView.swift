@@ -11,7 +11,7 @@ import UIKit
 protocol MainViewDelegate where Self: UIViewController {
 }
 
-final class MainView: UIView {
+final class MainView: UIView, UIScrollViewDelegate {
   
   private var scrollView: UIScrollView!
   private var imageView: UIImageView!
@@ -54,7 +54,6 @@ private extension MainView {
     scrollView.translatesAutoresizingMaskIntoConstraints = false
   }
   
-  
   func setupHeader()  {
     imageView = UIImageView()
     imageView.image = UIImage(named: "image")
@@ -89,14 +88,6 @@ extension MainView: UITableViewDataSource {
     let cell = tableView.dequeueReusableCell(withIdentifier: ParalaxCell.identifier, for: indexPath) as! ParalaxCell
     
     return cell
-  }
-}
-
-
-//MARK: - UITableViewDelegate
-extension MainView: UITableViewDelegate {
-  
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
   }
 }
 
